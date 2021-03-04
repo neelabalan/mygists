@@ -19,7 +19,7 @@ jobs:
         run: pip install -r GistOfGists/requirements.txt
       - name: Execute Python script
         run: |
-          python GistOfGists/gistofgists.py --user ${{ secrets.USERNAME }}
+          python GistOfGists/gistofgists.py ${{ secrets.USERNAME }}
       - name: delete the gistofgists repo
         run: rm -rf GistOfGists/
       - name: setup git config
