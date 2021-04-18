@@ -28,6 +28,7 @@ jobs:
           git config user.email ${{ secrets.EMAIL }}
       - name: commit changes
         run: |
+          git pull
           git add -A
           git commit -m "updated README" || echo "No changes to commit"
           git push 
